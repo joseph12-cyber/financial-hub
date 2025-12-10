@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ========== BASIC META ========== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Page – Football Agency Sierra Leone</title>
+
+    <!-- ========== GOOGLE FONT ========== -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- ========== INTERNAL STYLES ========== -->
+    <style>
+        /* ---------- ROOT VARIABLES ---------- */
+        :root{
+            --bg        : #0b0b0b;   /* background colour */
+            --primary   : #ffffff;
+            --accent    : #0f7b0f;
+            --card-bg   : #111111;
+            --nav-link  : #cccccc;
+            --win       : #0f7b0f;
+        }
+
+        /* ---------- GLOBAL RESET ---------- */
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{
+            font-family: 'Oswald', sans-serif;
+            background-color: var(--bg);
+            color: var(--primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        a{text-decoration:none;color:inherit;}
+
+        /* ---------- NAVIGATION ---------- */
+        header{
+            width: 100%;
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #222;
+        }
+        .logo{font-size:1.7rem;font-weight:600;letter-spacing:1px;}
+        nav ul{list-style:none;display:flex;gap:30px;}
+        nav ul li a{font-size:1.05rem;text-transform:uppercase;letter-spacing:.5px;color:var(--nav-link);transition:color .25s;}
+        nav ul li a:hover{color:var(--accent);}
+
+        /* ---------- HERO ---------- */
+        .hero{text-align:center;padding:60px 20px 50px;}
+        .hero h1{font-size:3.2rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;}
+
+        /* ---------- SECTION TITLE ---------- */
+        .section-title{text-align:center;font-size:1.8rem;margin:40px 0 25px;letter-spacing:1px;text-transform:uppercase;}
+
+        /* ---------- GRIDS ---------- */
+        .fixtures-grid,
+        .results-grid{
+            width:90%;max-width:1000px;margin:0 auto 80px;
+            display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;
+        }
+
+        /* ---------- CARDS ---------- */
+        .fixture-card,
+        .result-card{
+            background:var(--card-bg);border-radius:8px;padding:25px;
+            display:flex;flex-direction:column;align-items:center;gap:12px;
+            transition:transform .3s,box-shadow .3s;
+        }
+        .fixture-card:hover,
+        .result-card:hover{transform:translateY(-5px);box-shadow:0 0 20px rgba(15,123,15,.35);}
+
+        /* ---------- TEAM ROW ---------- */
+        .teams-row{width:100%;display:flex;justify-content:space-between;align-items:center;gap:15px;}
+        .badge{width:60px;height:60px;background:#1a1a1a center/cover no-repeat;border-radius:50%;}
+        .vs{font-size:1.2rem;font-weight:600;color:var(--accent);}
+        .score{font-size:2rem;font-weight:600;}
+        .winner{color:var(--win);}
+
+        /* ---------- LABELS ---------- */
+        .fixture-info,
+        .result-label{margin-top:8px;font-size:1rem;color:#aaa;}
+
+        /* ---------- FOOTER ---------- */
+        footer{margin-top:auto;text-align:center;padding:25px 20px;font-size:.9rem;color:#777;border-top:1px solid #222;}
+    </style>
+</head>
+
+<body>
+    <!-- ========================================================= -->
+    <!-- HEADER / NAVIGATION                                       -->
+    <!-- ========================================================= -->
+    <header>
+        <div class="logo">MATCHPAGE</div>
+        <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="matches.html">Match</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <!-- ========================================================= -->
+    <!-- HERO SECTION                                              -->
+    <!-- ========================================================= -->
+    <section class="hero">
+        <h1>Fixture & Results</h1>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- UPCOMING FIXTURES                                         -->
+    <!-- ========================================================= -->
+    <h2 class="section-title">Upcoming Fixtures</h2>
+    <div class="fixtures-grid">
+        <!-- FIT vs BUR -->
+        <div class="fixture-card">
+            <div class="teams-row">
+                <div class="badge" style="background-image:url('image/FIT.jpg')"></div>
+                <span class="FIT vs BUR"> FIT V BUR</span>
+                <div class="badge" style="background-image:url('image/BUR.jpg')"></div>
+            </div>
+            <div class="fixture-info">21 Nov. 2025 @ 2:00PM</div>
+        </div>
+
+        <!-- CVC vs LWL -->
+        <div class="fixture-card">
+            <div class="teams-row">
+                <div class="badge" style="background-image:url('image/CVC.jpg')"></div>
+                <span class="CVC vs LWL"> CVC V LWL</span>
+                <div class="badge" style="background-image:url('image/LWL.jpg')"></div>
+            </div>
+            <div class="fixture-info">20 Nov. 2025 @ 3:15PM</div>
+        </div>
+
+        <!-- BBC vs CCI -->
+        <div class="fixture-card">
+            <div class="teams-row">
+                <div class="badge" style="background-image:url('image/BBC.jpg')"></div>
+                <span class="BBC vs CCI">BBC V CCI </span>
+                <div class="badge" style="background-image:url('image/CCI.jpg')"></div>
+            </div>
+            <div class="fixture-info">22 Nov. 2025 @ 4:00PM</div>
+        </div>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- RECENT RESULTS                                            -->
+    <!-- ========================================================= -->
+    <h2 class="section-title">Recent Results</h2>
+    <div class="results-grid">
+        <!-- FIT 3-1 BUR -->
+        <div class="result-card">
+            <div class="teams-row">
+                <div class="badge" style="background-image:url('image/FIT.jpg')"></div>
+                <span class="score winner">FIT 3-1 BUR</span>
+                <div class="badge" style="background-image:url('image/BUR.jpg')"></div>
+            </div>
+            <div class="result-label">WIN</div>
+        </div>
+
+        <!-- BBC 2-1 CCI -->
+        <div class="result-card">
+            <div class="teams-row">
+                <div class="badge" style="background-image:url('image/BBC.jpg')"></div>
+                <span class="score winner">BBC 2-1 CCI</span>
+                <div class="badge" style="background-image:url('image/CCI.jpg')"></div>
+            </div>
+            <div class="result-label">WIN</div>
+        </div>
+
+        <!-- CVC 5-2 LWL -->
+        <div class="result-card">
+            <div class="teams-row">
+                <div class="badge" style="background-image:url('image/CVC.jpg')"></div>
+                <span class="score winner"> CVC 5-2 LWL</span>
+                <div class="badge" style="background-image:url('image/LWL.jpg')"></div>
+            </div>
+            <div class="result-label">WIN</div>
+        </div>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- FOOTER                                                    -->
+    <!-- ========================================================= -->
+    <footer>Copyright &copy; Football Agency Sierra Leone 2025</footer>
+</body>
+</html>

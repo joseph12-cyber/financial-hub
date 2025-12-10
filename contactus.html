@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ========== META ========== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – Football Agency Sierra Leone</title>
+
+  <!-- ========== GOOGLE FONT ========== -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- ========== STYLES ========== -->
+  <style>
+    :root {
+      --bg: #0b0b0b;      /* page background */
+      --primary: #ffffff;  /* text */
+      --accent: #0f7b0f;   /* green highlights */
+      --card-bg: #111111;  /* cards */
+      --nav-link: #cccccc; /* nav text */
+      --input-bg: #1a1a1a; /* form fields */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Oswald', sans-serif;
+      background: var(--bg);
+      color: var(--primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ---------- NAV ---------- */
+    header {
+      width: 100%;
+      padding: 25px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #222;
+    }
+    .logo {
+      font-size: 1.7rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    nav ul li a {
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--nav-link);
+      transition: color 0.25s;
+    }
+    nav ul li a:hover {
+      color: var(--accent);
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      text-align: center;
+      padding: 70px 20px 50px;
+    }
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* ---------- CONTACT WRAPPER ---------- */
+    .contact-wrapper {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto 80px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    /* ---------- INFO CARD ---------- */
+    .info-card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      padding: 30px;
+    }
+    .info-card h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .info-card p {
+      margin: 10px 0;
+      font-size: 1.1rem;
+      color: #ddd;
+    }
+    .info-card .label {
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    /* ---------- FORM CARD ---------- */
+    .form-card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      padding: 30px;
+    }
+    .form-card h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1rem;
+      color: #ccc;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: none;
+      border-radius: 4px;
+      background: var(--input-bg);
+      color: var(--primary);
+      font-size: 1rem;
+      font-family: 'Oswald', sans-serif;
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .send-btn {
+      display: inline-block;
+      padding: 12px 35px;
+      border: none;
+      border-radius: 4px;
+      background: var(--accent);
+      color: var(--bg);
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .send-btn:hover {
+      background: #0d6b0d;
+    }
+
+    /* ---------- IMAGE PLACEHOLDER ---------- */
+    .image-holder {
+      width: 100%;
+      height: 220px;
+      background: #1a1a1a url("https://via.placeholder.com/800x400/1a1a1a/ffffff?text=Contact+Image") center/cover no-repeat;
+      border-radius: 8px;
+      margin-top: 25px;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      margin-top: auto;
+      text-align: center;
+      padding: 25px 20px;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #222;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ========================================================= -->
+  <!-- HEADER / NAVIGATION                                       -->
+  <!-- ========================================================= -->
+  <header>
+    <div class="logo">CONTACT PAGE</div>
+    <nav>
+       <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="matches.html">Match</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <!-- ========================================================= -->
+  <!-- HERO SECTION                                              -->
+  <!-- ========================================================= -->
+  <section class="hero">
+    <h1>Contact Us</h1>
+    <p>Get In Touch</p>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- CONTACT CONTENT                                           -->
+  <!-- ========================================================= -->
+  <div class="contact-wrapper">
+    <!-- LEFT: INFO -->
+    <div class="info-card">
+      <h2>Our Details</h2>
+      <p><span class="label">Office Address:</span><br>16 Diamei Road, Goderich</p>
+      <p><span class="label">Phone:</span><br>+232 776 655 44</p>
+      <p><span class="label">Email:</span><br>Bcoktakero@gmail.com</p>
+      <p><span class="label">Office Hours:</span><br>9 AM – 6 PM</p>
+
+      <!-- IMAGE PLACEHOLDER -->
+      <div class="image-holder"></div>
+    </div>
+
+    <!-- RIGHT: FORM -->
+    <div class="form-card">
+      <h2>Send Message</h2>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="send-btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- FOOTER                                                    -->
+  <!-- ========================================================= -->
+  <footer>Copyright &copy; Football Agency Sierra Leone 2025</footer>
+</body>
+
+</html>

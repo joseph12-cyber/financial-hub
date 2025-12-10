@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ========== BASIC META ========== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us – Football Agency Sierra Leone</title>
+
+    <!-- ========== GOOGLE FONT ========== -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- ========== INTERNAL STYLES ========== -->
+    <style>
+        /* ---------- ROOT VARIABLES (COLOURS) ---------- */
+        :root{
+            --bg        : #0b0b0b;   /* page background #0b0b0b */
+            --primary   : #ffffff;   /* text colour */
+            --accent    : #0f7b0f;   /* green highlights */
+            --card-bg   : #111111;   /* card background */
+            --nav-link  : #cccccc;   /* nav text */
+            --timeline  : #0f7b0f;   /* timeline green */
+        }
+
+        /* ---------- GLOBAL RESET ---------- */
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{
+            font-family: 'Oswald', sans-serif;
+            background-color: var(--bg);
+            color: var(--primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+        }
+        a{text-decoration:none;color:inherit;}
+
+        /* ---------- NAVIGATION ---------- */
+        header{
+            width: 100%;
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #222;
+        }
+        .logo{font-size:1.7rem;font-weight:600;letter-spacing:1px;}
+        nav ul{list-style:none;display:flex;gap:30px;}
+        nav ul li a{font-size:1.05rem;text-transform:uppercase;letter-spacing:.5px;color:var(--nav-link);transition:color .25s;}
+        nav ul li a:hover{color:var(--accent);}
+
+        /* ---------- HERO ---------- */
+        .hero{text-align:center;padding:70px 20px 50px;}
+        .hero h1{font-size:3.2rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;}
+
+        /* ---------- SECTIONS ---------- */
+        .section{width:90%;max-width:1000px;margin:0 auto 60px;}
+        .section h2{font-size:1.8rem;margin-bottom:20px;letter-spacing:1px;text-transform:uppercase;color:var(--accent);}
+        .section p{margin-bottom:15px;font-size:1.05rem;color:#ddd;}
+
+        /* ---------- TIMELINE ---------- */
+        .timeline{position:relative;padding:20px 0;}
+        .timeline::before{content:'';position:absolute;left:20px;top:0;bottom:0;width:3px;background:var(--timeline);}
+        .timeline-item{position:relative;padding-left:60px;margin-bottom:30px;}
+        .timeline-item::before{content:'';position:absolute;left:11px;top:5px;width:20px;height:20px;background:var(--timeline);border-radius:50%;}
+        .timeline-item h3{font-size:1.3rem;margin-bottom:5px;}
+        .timeline-item p{font-size:1rem;color:#aaa;}
+
+        /* ---------- VISION / MISSION GRID ---------- */
+        .vm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
+        .vm-card{background:var(--card-bg);border-radius:8px;padding:25px;text-align:center;transition:transform .3s,box-shadow .3s;}
+        .vm-card:hover{transform:translateY(-5px);box-shadow:0 0 20px rgba(15,123,15,.35);}
+        .vm-card h3{font-size:1.5rem;margin-bottom:10px;color:var(--accent);}
+        .vm-card p{font-size:1rem;color:#ddd;}
+
+        /* ---------- ACHIEVEMENT LIST ---------- */
+        .achieve-list{list-style:none;}
+        .achieve-list li{padding-left:25px;position:relative;margin-bottom:12px;font-size:1.05rem;color:#ddd;}
+        .achieve-list li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:600;}
+
+        /* ---------- FOOTER ---------- */
+        footer{margin-top:auto;text-align:center;padding:25px 20px;font-size:.9rem;color:#777;border-top:1px solid #222;}
+    </style>
+</head>
+
+<body>
+    <!-- ========================================================= -->
+    <!-- HEADER / NAVIGATION                                       -->
+    <!-- ========================================================= -->
+    <header>
+        <div class="logo">ABOUTUS PAGE</div>
+        <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+          <li><a href="players.html">Players</a></li>
+          <li><a href="matches.html">Match</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <!-- ========================================================= -->
+    <!-- HERO SECTION                                              -->
+    <!-- ========================================================= -->
+    <section class="hero">
+        <h1>About Us</h1>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- OUR STORY & HISTORY                                       -->
+    <!-- ========================================================= -->
+    <section class="section">
+        <h2>Our Story & History</h2>
+        <p>
+            Established in Freetown with the sole purpose of creating a global presence, our agency is dedicated to the development, management and guidance of Sierra Leonean footballers. We commit ourselves to ensure players reach the highest standards both on and off the pitch.
+        </p>
+        <p>
+            The Football Agency Sierra Leone (FASL) was founded in 2025 by a group of passionate sports professionals and community leaders led by Joseph Barber. The agency was established in response to a critical gap in the Sierra Leonean football ecosystem: the lack of a structured, ethical and internationally connected body that could transition local talents from amateur leagues to the competitive demands of European, African or Asian clubs.
+        </p>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- TIMELINE                                                  -->
+    <!-- ========================================================= -->
+    <section class="section">
+        <h2>Timeline</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>2025 – Agency Founding</h3>
+                <p>FASL is officially registered in Freetown.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2025 – First European Transfer</h3>
+                <p>Joseph Barber secures a landmark deal with a top-division European club.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2025 – Community Program Launch</h3>
+                <p>Annual Freetown Youth Football Festival is funded and kicked off.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- VISION & MISSION                                          -->
+    <!-- ========================================================= -->
+    <section class="section">
+        <h2>Vision & Mission</h2>
+        <div class="vm-grid">
+            <div class="vm-card">
+                <h3>Vision</h3>
+                <p>To be the leading football agency in West Africa, recognised globally for developing Sierra Leonean players and fostering excellence on and off the pitch.</p>
+            </div>
+            <div class="vm-card">
+                <h3>Mission</h3>
+                <p>To maximise player potential and reinvest into local youth programmes to ensure a continuous pipeline of talent for the future.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- OUR ACHIEVEMENTS                                          -->
+    <!-- ========================================================= -->
+    <section class="section">
+        <h2>Our Achievements</h2>
+        <ul class="achieve-list">
+            <li>Secured multiple Sierra Leonean transfers to top-tier European leagues (Belgian Pro League, Turkish Süper Lig).</li>
+            <li>Players represent Sierra Leone in AFCON qualifiers, occupying starting roles secured by the agency.</li>
+            <li>Fund and organise the annual Freetown Youth Football Festival, providing scouting opportunities for over 500 youngsters.</li>
+        </ul>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- FOOTER                                                    -->
+    <!-- ========================================================= -->
+    <footer>Copyright &copy; Football Agency Sierra Leone 2025</footer>
+</body>
+</html>/
+<div class=""></div>

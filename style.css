@@ -1,0 +1,403 @@
+/* ========================================================= */
+/*  ROOT  –  COLOUR PALETTE                                  */
+/* ========================================================= */
+:root{
+    --bg          : #0b0b0b;   /* page background */
+    --primary     : #ffffff;   /* text */
+    --accent      : #0f7b0f;   /* green highlights */
+    --card-bg     : #111111;   /* cards / forms */
+    --nav-link    : #cccccc;   /* nav text */
+    --input-bg    : #1a1a1a;   /* form fields */
+    --timeline    : #0f7b0f;   /* timeline line */
+    --win         : #0f7b0f;   /* result “WIN” badge */
+}
+
+/* ========================================================= */
+/*  GLOBAL RESET & BASE TYPOGRAPHY                           */
+/* ========================================================= */
+::before,*::after{
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
+}
+body{
+    font-family  : 'Oswald', sans-serif;
+    background   : var(--bg);
+    color        : var(--primary);
+    min-height   : 100vh;
+    display      : flex;
+    flex-direction: column;
+    line-height  : 1.6;
+}
+a{
+    text-decoration : none;
+    color           : inherit;
+}
+img,
+.image-holder,
+.badge{
+    max-width : 100%;
+    display   : block;
+}
+
+/* ========================================================= */
+/*  NAVIGATION BAR (used on every page)                      */
+/* ========================================================= */
+header{
+    width           : 100%;
+    padding         : 25px 8%;
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    border-bottom   : 1px solid #222;
+}
+.logo{
+    font-size      : 1.7rem;
+    font-weight    : 600;
+    letter-spacing : 1px;
+}
+nav ul{
+    list-style : none;
+    display    : flex;
+    gap        : 30px;
+}
+nav ul li a{
+    font-size      : 1.05rem;
+    text-transform : uppercase;
+    letter-spacing : .5px;
+    color          : var(--nav-link);
+    transition     : color .25s;
+}
+nav ul li a:hover{
+    color : var(--accent);
+}
+
+/* ========================================================= */
+/*  HERO SECTION (used on every page)                        */
+/* ========================================================= */
+.hero{
+    text-align : center;
+    padding    : 70px 20px 50px;
+}
+.hero h1{
+    font-size      : 3.2rem;
+    font-weight    : 500;
+    letter-spacing : 2px;
+    text-transform : uppercase;
+}
+
+/* ========================================================= */
+/*  SECTION TITLE (shared)                                   */
+/* ========================================================= */
+.section-title{
+    text-align     : center;
+    font-size      : 1.8rem;
+    margin         : 40px 0 25px;
+    letter-spacing : 1px;
+    text-transform : uppercase;
+}
+
+/* ========================================================= */
+/*  PLAYERS PAGE – GRID & CARDS                              */
+/* ========================================================= */
+.players-grid{
+    width               : 90%;
+    max-width           : 1200px;
+    margin              : 0 auto 80px;
+    display             : grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap                 : 40px;
+}
+.player-card{
+    background    : var(--card-bg);
+    border-radius : 8px;
+    overflow      : hidden;
+    text-align    : center;
+    transition    : transform .3s, box-shadow .3s;
+}
+.player-card:hover{
+    transform  : translateY(-6px);
+    box-shadow : 0 0 20px rgba(15, 123, 15, .35);
+}
+.player-card .img-holder{
+    width               : 100%;
+    height              : 320px;
+    background          : #1a1a1a center/cover no-repeat;
+    background-image    : url("https://via.placeholder.com/400x500/1a1a1a/ffffff?text=PHOTO");
+}
+.player-card h3{
+    margin         : 22px 0 8px;
+    font-size      : 1.5rem;
+    font-weight    : 500;
+    letter-spacing : 1px;
+    text-transform : uppercase;
+}
+.player-card .number{
+    font-size     : 2.2rem;
+    font-weight   : 600;
+    color         : var(--accent);
+    margin-bottom : 25px;
+}
+
+/* ========================================================= -->
+/*  MATCH PAGE – FIXTURE / RESULT CARDS                      */
+/* ========================================================= -->
+.fixtures-grid,
+.results-grid{
+    width               : 90%;
+    max-width           : 1000px;
+    margin              : 0 auto 80px;
+    display             : grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap                 : 30px;
+}
+.fixture-card,
+.result-card{
+    background    : var(--card-bg);
+    border-radius : 8px;
+    padding       : 25px;
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    gap           : 12px;
+    transition    : transform .3s, box-shadow .3s;
+}
+.fixture-card:hover,
+.result-card:hover{
+    transform  : translateY(-5px);
+    box-shadow : 0 0 20px rgba(15, 123, 15, .35);
+}
+.teams-row{
+    width          : 100%;
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    gap            : 15px;
+}
+.badge{
+    width          : 60px;
+    height         : 60px;
+    background     : #1a1a1a center/cover no-repeat;
+    border-radius  : 50%;
+}
+.vs{
+    font-size   : 1.2rem;
+    font-weight : 600;
+    color       : var(--accent);
+}
+.score{
+    font-size   : 2rem;
+    font-weight : 600;
+}
+.winner{
+    color : var(--win);
+}
+.fixture-info,
+.result-label{
+    margin-top : 8px;
+    font-size  : 1rem;
+    color      : #aaa;
+}
+
+/* ========================================================= -->
+/*  ABOUT PAGE – TIMELINE                                     -->
+/* ========================================================= -->
+.timeline{
+    position : relative;
+    padding  : 20px 0;
+}
+.timeline::before{
+    content    : '';
+    position   : absolute;
+    left       : 20px;
+    top        : 0;
+    bottom     : 0;
+    width      : 3px;
+    background : var(--timeline);
+}
+.timeline-item{
+    position      : relative;
+    padding-left  : 60px;
+    margin-bottom : 30px;
+}
+.timeline-item::before{
+    content       : '';
+    position      : absolute;
+    left          : 11px;
+    top           : 5px;
+    width         : 20px;
+    height        : 20px;
+    background    : var(--timeline);
+    border-radius : 50%;
+}
+.timeline-item h3{
+    font-size     : 1.3rem;
+    margin-bottom : 5px;
+}
+.timeline-item p{
+    font-size : 1rem;
+    color     : #aaa;
+}
+
+/* ---------- Vision / Mission Grid ---------- */
+.vm-grid{
+    display               : grid;
+    grid-template-columns : repeat(auto-fit, minmax(280px, 1fr));
+    gap                   : 30px;
+}
+.vm-card{
+    background    : var(--card-bg);
+    border-radius : 8px;
+    padding       : 25px;
+    text-align    : center;
+    transition    : transform .3s, box-shadow .3s;
+}
+.vm-card:hover{
+    transform  : translateY(-5px);
+    box-shadow : 0 0 20px rgba(15, 123, 15, .35);
+}
+.vm-card h3{
+    font-size     : 1.5rem;
+    margin-bottom : 10px;
+    color         : var(--accent);
+}
+.vm-card p{
+    font-size : 1rem;
+    color     : #ddd;
+}
+
+/* ---------- Achievement List ---------- */
+.achieve-list{
+    list-style : none;
+}
+.achieve-list li{
+    padding-left  : 25px;
+    position      : relative;
+    margin-bottom : 12px;
+    font-size     : 1.05rem;
+    color         : #ddd;
+}
+.achieve-list li::before{
+    content    : '✓';
+    position   : absolute;
+    left       : 0;
+    color      : var(--accent);
+    font-weight: 600;
+}
+
+/* ========================================================= -->
+/*  CONTACT PAGE – FORM & INFO CARD                          -->
+/* ========================================================= */
+.contact-wrapper{
+    width               : 90%;
+    max-width           : 1000px;
+    margin              : 0 auto 80px;
+    display             : grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap                 : 40px;
+}
+.info-card,
+.form-card{
+    background    : var(--card-bg);
+    border-radius : 8px;
+    padding       : 30px;
+}
+.info-card h2,
+.form-card h2{
+    font-size      : 1.8rem;
+    margin-bottom  : 20px;
+    letter-spacing : 1px;
+    text-transform : uppercase;
+    color          : var(--accent);
+}
+.info-card p{
+    margin     : 10px 0;
+    font-size  : 1.1rem;
+    color      : #ddd;
+}
+.info-card .label{
+    font-weight : 600;
+    color       : var(--accent);
+}
+.form-group{
+    margin-bottom : 20px;
+}
+.form-group label{
+    display       : block;
+    margin-bottom : 8px;
+    font-size     : 1rem;
+    color         : #ccc;
+}
+.form-group input,
+.form-group textarea{
+    width         : 100%;
+    padding       : 12px 15px;
+    border        : none;
+    border-radius : 4px;
+    background    : var(--input-bg);
+    color         : var(--primary);
+    font-size     : 1rem;
+    font-family   : 'Oswald', sans-serif;
+}
+.form-group textarea{
+    resize     : vertical;
+    min-height : 120px;
+}
+.send-btn{
+    display         : inline-block;
+    padding         : 12px 35px;
+    border          : none;
+    border-radius   : 4px;
+    background      : var(--accent);
+    color           : var(--bg);
+    font-size       : 1.1rem;
+    font-weight     : 600;
+    text-transform  : uppercase;
+    cursor          : pointer;
+    transition      : background 0.3s;
+}
+.send-btn:hover{
+    background : #0d6b0d;
+}
+
+/* ---------- Image Placeholder (Contact page) ---------- */
+.image-holder{
+    width         : 100%;
+    height        : 220px;
+    background    : #1a1a1a center/cover no-repeat;
+    border-radius : 8px;
+    margin-top    : 25px;
+}
+
+/* ========================================================= -->
+/*  SHARED SECTION CLASS (used on About & Contact)           -->
+/* ========================================================= */
+.section{
+    width      : 90%;
+    max-width  : 1000px;
+    margin     : 0 auto 60px;
+}
+.section h2{
+    font-size      : 1.8rem;
+    margin-bottom  : 20px;
+    letter-spacing : 1px;
+    text-transform : uppercase;
+    color          : var(--accent);
+}
+.section p{
+    margin-bottom : 15px;
+    font-size     : 1.05rem;
+    color         : #ddd;
+}
+
+/* ========================================================= -->
+/*  FOOTER (used on every page)                              -->
+/* ========================================================= */
+footer{
+    margin-top : auto;
+    text-align : center;
+    padding    : 25px 20px;
+    font-size  : .9rem;
+    color      : #777;
+    border-top : 1px solid #222;
+}
